@@ -1,0 +1,10 @@
+<div class="netflix-rows">
+    <div class="section-header">Action Movies</div>
+    <div class="cards-section">
+        <span (click)="onBackward()"  class="forward-backward-icons"><</span>
+        <mat-card *ngFor="let action of actionMoviesArray.slice(0,6);" class="card">
+            <img  width="100%" src="{{action.backdrop_path}}"/>
+        </mat-card>
+        <span (click)="onForward()" class="forward-backward-icons">></span>
+    </div>
+</div>
