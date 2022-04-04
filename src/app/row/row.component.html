@@ -1,10 +1,46 @@
 <div class="netflix-rows">
     <div class="section-header">Action Movies</div>
     <div class="cards-section">
-        <span (click)="onBackward()"  class="forward-backward-icons"><</span>
-        <mat-card *ngFor="let action of actionMoviesArray.slice(0,6);" class="card">
+        <span [ngClass]="{'disabled':n1==0}"  (click)="onBackward()"  class="forward-backward-icons"><</span>
+        <mat-card *ngFor="let action of filteredActionMoviesArray;" class="card">
             <img  width="100%" src="{{action.backdrop_path}}"/>
         </mat-card>
-        <span (click)="onForward()" class="forward-backward-icons">></span>
+        <span [ngClass]="{'disabled':n2==actionMoviesArray.length}" (click)="onForward()" class="forward-backward-icons">></span>
+    </div>
+
+    <div class="section-header">Comedy Movies</div>
+    <div class="cards-section">
+        <span [ngClass]="{'disabled':n1==0}"  (click)="onBackward()"  class="forward-backward-icons"><</span>
+        <mat-card *ngFor="let action of filteredActionMoviesArray;" class="card">
+            <img  width="100%" src="{{action.backdrop_path}}"/>
+        </mat-card>
+        <span [ngClass]="{'disabled':n2==actionMoviesArray.length}" (click)="onForward()" class="forward-backward-icons">></span>
+    </div>
+
+    <div class="section-header">Horror Movies</div>
+    <div class="cards-section">
+        <span [ngClass]="{'disabled':n1==0}"  (click)="onBackward()"  class="forward-backward-icons"><</span>
+        <mat-card *ngFor="let action of filteredActionMoviesArray;" class="card">
+            <img  width="100%" src="{{action.backdrop_path}}"/>
+        </mat-card>
+        <span [ngClass]="{'disabled':n2==actionMoviesArray.length}" (click)="onForward()" class="forward-backward-icons">></span>
+    </div>
+
+    <div class="section-header">Romance Movies</div>
+    <div class="cards-section">
+        <span [ngClass]="{'disabled':n1==0}"  (click)="onBackward()"  class="forward-backward-icons"><</span>
+        <mat-card *ngFor="let action of filteredActionMoviesArray;" class="card">
+            <img  width="100%" src="{{action.backdrop_path}}"/>
+        </mat-card>
+        <span [ngClass]="{'disabled':n2==actionMoviesArray.length}" (click)="onForward()" class="forward-backward-icons">></span>
+    </div>
+
+    <div class="section-header">Documentaries</div>
+    <div class="cards-section">
+        <span [ngClass]="{'disabled':n1==0}"  (click)="onBackward()"  class="forward-backward-icons"><</span>
+        <mat-card *ngFor="let action of filteredActionMoviesArray;" class="card">
+            <img  width="100%" src="{{action.backdrop_path}}"/>
+        </mat-card>
+        <span [ngClass]="{'disabled':n2==actionMoviesArray.length}" (click)="onForward()" class="forward-backward-icons">></span>
     </div>
 </div>
