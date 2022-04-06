@@ -27,7 +27,7 @@ export class TmdbService {
     return this.http.get(url);
   }
   getDocumentaries(){
-    const url= `${this.commonUrl}discover/movie?api_key=${this.API_KEY}&with_genres=10749`;
+    const url= `${this.commonUrl}discover/movie?api_key=${this.API_KEY}&with_genres=99`;
     return this.http.get(url);
   }
 }

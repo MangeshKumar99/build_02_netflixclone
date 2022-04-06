@@ -11,12 +11,30 @@
     display: flex;
     gap:0.8vw;
     overflow-x: scroll;
-    // scroll-behavior: smooth;
     .image{
       cursor: pointer;
       max-height: 17.4vh;
     }
   }
+}
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 7px;
+}
 
+/* Track */
+::-webkit-scrollbar-track {
+  background: #000;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
