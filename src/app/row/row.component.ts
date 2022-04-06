@@ -13,14 +13,13 @@ export class RowComponent implements OnInit {
   n1:number=0;
   n2:number=6;
   actionMoviesArray:any=[];
-  filteredActionMoviesArray:any=[];
+
 
   ngOnInit(): void {
     this.tmdbService.getActionMovies().subscribe((data:any)=>{
       console.log(data.results);
       this.actionMoviesArray=data.results;
       this.appendCommonImageUrl();
-      this.filteredActionMoviesArray=this.actionMoviesArray.slice(this.n1,this.n2);
     },(error)=>{
       console.log(error);
     })  
@@ -31,25 +30,4 @@ export class RowComponent implements OnInit {
       this.actionMoviesArray[i].backdrop_path=this.COMMON_IMAGE_URL+this.actionMoviesArray[i].backdrop_path;
     }
   }
-
-  onForward(){
-    this.n1=this.n1+6;
-    this.n2=this.n2+6;
-    if(this.n2>this.actionMoviesArray.length){
-      this.n1=this.n1-(this.n2-this.actionMoviesArray.length);
-      this.n2=this.actionMoviesArray.length;
-    }
-    this.filteredActionMoviesArray=this.actionMoviesArray.slice(this.n1,this.n2);
-  }
-
-  onBackward(){
-    this.n1=this.n1-6;
-    this.n2=this.n2-6;
-    if(this.n1<0){
-      this.n1=0;
-      this.n2=6;
-    }
-    this.filteredActionMoviesArray=this.actionMoviesArray.slice(this.n1,this.n2);
-  }
-
 }

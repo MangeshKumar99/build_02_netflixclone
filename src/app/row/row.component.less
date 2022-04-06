@@ -1,27 +1,22 @@
-.netflix-rows {
-  .section-header {
+.movie-section{
+  padding: 1.8vw;
+  .heading{
     display: table-cell;
     vertical-align: bottom;
     line-height: 1.25vw;
     font-size: 1.4vw;
-    padding-left: 1.6vw;
-    padding-bottom: 1vw;
+    padding: 1vw;
   }
-  .cards-section {
+  .image_container{
     display: flex;
-    gap: 0.5vw;
-    .card {
-      width: 15.6%;
-      padding: 0;
-      background: none;
+    gap:0.8vw;
+    overflow-x: scroll;
+    // scroll-behavior: smooth;
+    .image{
       cursor: pointer;
-    }
-    .forward-backward-icons {
-      align-self: center;
-      cursor:pointer;
-    }
-    .disabled{
-      pointer-events: none;
+      max-height: 17.4vh;
     }
   }
+
 }
+
