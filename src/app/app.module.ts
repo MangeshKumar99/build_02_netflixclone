@@ -7,15 +7,18 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { RowComponent } from './row/row.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatCardModule} from '@angular/material/card';
-import {MatIconModule} from '@angular/material/icon'
+import {MatIconModule} from '@angular/material/icon';
+import {MatToolbarModule} from '@angular/material/toolbar';
 import { HttpClientModule } from '@angular/common/http';
+import { PosterComponent } from './poster/poster.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    RowComponent
+    RowComponent,
+    PosterComponent
   ],
   imports: [
     BrowserModule,
@@ -23,9 +26,8 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserAnimationsModule,
     MatCardModule,
     HttpClientModule,
-    MatIconModule 
-    
-  
+    MatIconModule,
+    MatToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

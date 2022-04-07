@@ -30,4 +30,16 @@ export class TmdbService {
     const url= `${this.commonUrl}discover/movie?api_key=${this.API_KEY}&with_genres=99`;
     return this.http.get(url);
   }
+  getNetflixOriginals(){
+    const url= `${this.commonUrl}discover/tv?api_key=${this.API_KEY}&with_network=123`;
+    return this.http.get(url);
+  }
+  getTrending(){
+    const url=`${this.commonUrl}trending/all/week?api_key=${this.API_KEY}&language=en-US`;
+    return this.http.get(url);
+  }
+  getTopRated(){
+   const url=`${this.commonUrl}movie/top_rated?api_key=${this.API_KEY}&language=en-US`
+    return this.http.get(url);
+  }
 }

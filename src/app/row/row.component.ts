@@ -17,6 +17,9 @@ export class RowComponent implements OnInit {
   horrorMoviesArray:any=[];
   romanceMoviesArray:any=[];
   documentariesMoviesArray:any=[];
+  netflixOriginalsArray:any=[];
+  topRatedMoviesArray:any=[];
+  trendingMoviesArray:any=[];
 
 
   ngOnInit(): void {
@@ -59,6 +62,32 @@ export class RowComponent implements OnInit {
     },(error)=>{
       console.log(error);
     })
+
+    this.tmdbService.getNetflixOriginals().subscribe((data:any)=>{
+      console.log(data.results);
+      this.netflixOriginalsArray=data.results;
+      this.appendCommonImageUrl('netflix');
+    },(error)=>{
+      console.log(error);
+    })
+
+    this.tmdbService.getTopRated().subscribe((data:any)=>{
+      console.log(data.results);
+      this.topRatedMoviesArray=data.results;
+      this.appendCommonImageUrl('toprated');
+    },(error)=>{
+      console.log(error);
+    })
+
+    this.tmdbService.getTrending().subscribe((data:any)=>{
+      console.log(data.results);
+      this.documentariesMoviesArray=data.results;
+      this.appendCommonImageUrl('trending');
+    },(error)=>{
+      console.log(error);
+    })
+
+
   }
 
   appendCommonImageUrl(val:string){
@@ -89,6 +118,24 @@ export class RowComponent implements OnInit {
     if(val=='documentaries'){
       for(let i=0;i<this.documentariesMoviesArray.length;i++){
         this.documentariesMoviesArray[i].backdrop_path=this.COMMON_IMAGE_URL+this.documentariesMoviesArray[i].backdrop_path;
+      }
+    }
+
+    if(val=='netflix'){
+      for(let i=0;i<this.netflixOriginalsArray.length;i++){
+        this.netflixOriginalsArray[i].backdrop_path=this.COMMON_IMAGE_URL+this.netflixOriginalsArray[i].backdrop_path;
+      }
+    }
+
+    if(val=='toprated'){
+      for(let i=0;i<this.topRatedMoviesArray.length;i++){
+        this.topRatedMoviesArray[i].backdrop_path=this.COMMON_IMAGE_URL+this.topRatedMoviesArray[i].backdrop_path;
+      }
+    }
+
+    if(val=='trending'){
+      for(let i=0;i<this.trendingMoviesArray.length;i++){
+        this.trendingMoviesArray[i].backdrop_path=this.COMMON_IMAGE_URL+this.trendingMoviesArray[i].backdrop_path;
       }
     }
   }
