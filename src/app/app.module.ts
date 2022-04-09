@@ -9,8 +9,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatCardModule} from '@angular/material/card';
 import {MatIconModule} from '@angular/material/icon';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatButtonModule} from '@angular/material/button'
 import { HttpClientModule } from '@angular/common/http';
 import { PosterComponent } from './poster/poster.component';
+
 
 
 @NgModule({
@@ -27,7 +29,8 @@ import { PosterComponent } from './poster/poster.component';
     MatCardModule,
     HttpClientModule,
     MatIconModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

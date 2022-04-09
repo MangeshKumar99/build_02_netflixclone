@@ -1,1 +1,13 @@
-
+<section style="height:30vw;" class="poster">
+  <div [style.background-image]="url"></div>
+  <div class="movie-desc">
+    <h3 class="title">{{poster.name}}</h3>
+    <div class="buttons">
+        <button mat-flat-button color="primary">Play</button>
+        <button mat-flat-button color="primary">My List</button>
+    </div>
+    <p class="overview">
+        {{poster.overview}}
+    </p>
+  </div>
+</section>

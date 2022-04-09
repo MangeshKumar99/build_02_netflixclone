@@ -21,73 +21,54 @@ export class RowComponent implements OnInit {
   topRatedMoviesArray:any=[];
   trendingMoviesArray:any=[];
 
-
   ngOnInit(): void {
-    this.tmdbService.getActionMovies().subscribe((data:any)=>{
-      console.log(data.results);
-      this.actionMoviesArray=data.results;
-      this.appendCommonImageUrl('action');
-    },(error)=>{
-      console.log(error);
-    })  
-
-    this.tmdbService.getComedyMovies().subscribe((data:any)=>{
-      console.log(data.results);
-      this.comedyMoviesArray=data.results;
-      this.appendCommonImageUrl('comedy');
-    },(error)=>{
-      console.log(error);
-    })
-
-    this.tmdbService.getHorrorMovies().subscribe((data:any)=>{
-      console.log(data.results);
-      this.horrorMoviesArray=data.results;
-      this.appendCommonImageUrl('horror');
-    },(error)=>{
-      console.log(error);
-    })
-
-    this.tmdbService.getRomanceMovies().subscribe((data:any)=>{
-      console.log(data.results);
-      this.romanceMoviesArray=data.results;
-      this.appendCommonImageUrl('romance');
-    },(error)=>{
-      console.log(error);
-    })
-
-    this.tmdbService.getDocumentaries().subscribe((data:any)=>{
-      console.log(data.results);
-      this.documentariesMoviesArray=data.results;
-      this.appendCommonImageUrl('documentaries');
-    },(error)=>{
-      console.log(error);
-    })
-
     this.tmdbService.getNetflixOriginals().subscribe((data:any)=>{
-      console.log(data.results);
       this.netflixOriginalsArray=data.results;
       this.appendCommonImageUrl('netflix');
     },(error)=>{
-      console.log(error);
     })
 
     this.tmdbService.getTopRated().subscribe((data:any)=>{
-      console.log(data.results);
       this.topRatedMoviesArray=data.results;
       this.appendCommonImageUrl('toprated');
     },(error)=>{
-      console.log(error);
     })
 
     this.tmdbService.getTrending().subscribe((data:any)=>{
-      console.log(data.results);
-      this.documentariesMoviesArray=data.results;
+      this.trendingMoviesArray=data.results;
       this.appendCommonImageUrl('trending');
     },(error)=>{
-      console.log(error);
     })
 
+    this.tmdbService.getActionMovies().subscribe((data:any)=>{
+      this.actionMoviesArray=data.results;
+      this.appendCommonImageUrl('action');
+    },(error)=>{
+    })  
 
+    this.tmdbService.getComedyMovies().subscribe((data:any)=>{
+      this.comedyMoviesArray=data.results;
+      this.appendCommonImageUrl('comedy');
+    },(error)=>{
+    })
+
+    this.tmdbService.getHorrorMovies().subscribe((data:any)=>{
+      this.horrorMoviesArray=data.results;
+      this.appendCommonImageUrl('horror');
+    },(error)=>{
+    })
+
+    this.tmdbService.getRomanceMovies().subscribe((data:any)=>{
+      this.romanceMoviesArray=data.results;
+      this.appendCommonImageUrl('romance');
+    },(error)=>{
+    })
+
+    this.tmdbService.getDocumentaries().subscribe((data:any)=>{
+      this.documentariesMoviesArray=data.results;
+      this.appendCommonImageUrl('documentaries');
+    },(error)=>{
+    })
   }
 
   appendCommonImageUrl(val:string){
