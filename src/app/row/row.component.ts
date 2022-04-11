@@ -10,8 +10,6 @@ export class RowComponent implements OnInit {
 
   constructor(private tmdbService:TmdbService) { }
   COMMON_IMAGE_URL='https://image.tmdb.org/t/p/original';
-  n1:number=0;
-  n2:number=6;
   actionMoviesArray:any=[];
   comedyMoviesArray:any=[];
   horrorMoviesArray:any=[];
@@ -20,6 +18,7 @@ export class RowComponent implements OnInit {
   netflixOriginalsArray:any=[];
   topRatedMoviesArray:any=[];
   trendingMoviesArray:any=[];
+  isImageClicked:boolean=false;
 
   ngOnInit(): void {
     this.tmdbService.getNetflixOriginals().subscribe((data:any)=>{

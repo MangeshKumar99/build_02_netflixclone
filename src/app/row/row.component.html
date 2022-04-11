@@ -1,56 +1,60 @@
+<section *ngIf="isImageClicked" class="movie-section">
+    <iframe  style="border: none;" width="1450" height="345" src="https://www.youtube.com/embed/RBumgq5yVrA"></iframe>
+</section>
+
 <section class="movie-section">
     <div class="heading">NETFLIX ORIGINALS</div>
     <div class="image_container">
-        <img class="image" *ngFor="let i of netflixOriginalsArray" src="{{i.backdrop_path}}"/>
+        <img (click)="isImageClicked=!isImageClicked" class="image" *ngFor="let i of netflixOriginalsArray" src="{{i.backdrop_path}}"/>
     </div>
 </section>
 
 <section class="movie-section">
     <div class="heading">Trending</div>
     <div class="image_container">
-        <img class="image" *ngFor="let i of trendingMoviesArray" src="{{i.backdrop_path}}"/>
+        <img (click)="isImageClicked=!isImageClicked"  class="image" *ngFor="let i of trendingMoviesArray" src="{{i.backdrop_path}}"/>
     </div>
 </section>
 
 <section class="movie-section">
     <div class="heading">Top rated</div>
     <div class="image_container">
-        <img class="image" *ngFor="let i of  topRatedMoviesArray" src="{{i.backdrop_path}}"/>
+        <img (click)="isImageClicked=!isImageClicked"  class="image" *ngFor="let i of  topRatedMoviesArray" src="{{i.backdrop_path}}"/>
     </div>
 </section>
 
 <section class="movie-section">
     <div class="heading">Action Movies</div>
     <div class="image_container">
-        <img class="image" *ngFor="let i of actionMoviesArray" src="{{i.backdrop_path}}"/>
+        <img (click)="isImageClicked=!isImageClicked"  class="image" *ngFor="let i of actionMoviesArray" src="{{i.backdrop_path}}"/>
     </div>
 </section>
 
 <section class="movie-section">
     <div class="heading">Comdey Movies</div>
     <div class="image_container">
-        <img class="image" *ngFor="let i of comedyMoviesArray" src="{{i.backdrop_path}}"/>
+        <img (click)="isImageClicked=!isImageClicked"  class="image" *ngFor="let i of comedyMoviesArray" src="{{i.backdrop_path}}"/>
     </div>
 </section>
 
 <section class="movie-section">
     <div class="heading">Horror Movies</div>
     <div class="image_container">
-        <img class="image" *ngFor="let i of horrorMoviesArray" src="{{i.backdrop_path}}"/>
+        <img (click)="isImageClicked=!isImageClicked"  class="image" *ngFor="let i of horrorMoviesArray" src="{{i.backdrop_path}}"/>
     </div>
 </section>
 
 <section class="movie-section">
     <div class="heading">Romance Movies</div>
     <div class="image_container">
-        <img class="image" *ngFor="let i of romanceMoviesArray" src="{{i.backdrop_path}}"/>
+        <img (click)="isImageClicked=!isImageClicked"  class="image" *ngFor="let i of romanceMoviesArray" src="{{i.backdrop_path}}"/>
     </div>
 </section>
 
 <section class="movie-section">
     <div class="heading">Documentaries</div>
     <div class="image_container">
-        <img class="image" *ngFor="let i of documentariesMoviesArray" src="{{i.backdrop_path}}"/>
+        <img (click)="isImageClicked=!isImageClicked"  class="image" *ngFor="let i of documentariesMoviesArray" src="{{i.backdrop_path}}"/>
     </div>
 </section>
 

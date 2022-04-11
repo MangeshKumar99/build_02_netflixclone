@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.less']
 })
 export class NavbarComponent implements OnInit {
-  scrollY: any;
-  constructor() { }
-
+  lastKnownScrollPosition:any=0;
+  constructor() {}
   ngOnInit(): void {
+    document.addEventListener('scroll', () => {
+      this.keepTrack();
+    })
   }
-
+  keepTrack(){
+    this.lastKnownScrollPosition=window.scrollY;
+  }
 }
