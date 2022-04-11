@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.less']
 })
 export class NavbarComponent implements OnInit {
+  scrollY: any;
   constructor() { }
 
   ngOnInit(): void {

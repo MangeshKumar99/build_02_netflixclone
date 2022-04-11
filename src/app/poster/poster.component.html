@@ -1,13 +1,14 @@
-<section style="height:30vw;" class="poster">
-  <div [style.background-image]="url"></div>
-  <div class="movie-desc">
-    <h3 class="title">{{poster.name}}</h3>
-    <div class="buttons">
-        <button mat-flat-button color="primary">Play</button>
-        <button mat-flat-button color="primary">My List</button>
+<section class="poster">
+  <div class="background-image" [ngStyle]="{'background': 'url(' + url + ') no-repeat 0 0 / cover'}">
+    <div class="movie-desc">
+      <h3 class="title">{{poster.name}}</h3>
+      <div class="buttons">
+          <button mat-flat-button color="primary">Play</button>
+          <button mat-flat-button color="primary">My List</button>
+      </div>
+      <p class="overview">
+          {{poster.overview}}
+      </p>
     </div>
-    <p class="overview">
-        {{poster.overview}}
-    </p>
   </div>
 </section>

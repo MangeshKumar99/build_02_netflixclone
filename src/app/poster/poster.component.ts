@@ -10,7 +10,7 @@ export class PosterComponent implements OnInit {
   netflixOriginalsArray: any=[];
   poster:any
   COMMON_IMAGE_URL='https://image.tmdb.org/t/p/original';
-  url: any;
+  url:any
 
   constructor(private tmdbService:TmdbService) { }
 
@@ -18,14 +18,12 @@ export class PosterComponent implements OnInit {
     this.tmdbService.getNetflixOriginals().subscribe((data:any)=>{
       this.netflixOriginalsArray=data.results;
       this.appendCommonImageUrl();
-      console.log("ikdj",this.netflixOriginalsArray)
       this.poster= this.netflixOriginalsArray[Math.floor(Math.random()*this.netflixOriginalsArray.length)];
-      console.log("**",this.poster);
-      console.log("**",this.poster.backdrop_path);
       this.url=this.poster.backdrop_path;
     },(error)=>{
     })
   }
+
 
   appendCommonImageUrl(){
       for(let i=0;i<this.netflixOriginalsArray.length;i++){
