@@ -1,9 +1,6 @@
 .movie-section{
   padding: 1.8vw;
   .heading{
-    display: table-cell;
-    vertical-align: bottom;
-    line-height: 1.25vw;
     font-size: 1.4vw;
     padding: 1vw;
     padding-top: 0.8vw;
@@ -17,7 +14,6 @@
       max-height: 17.4vh;
     }
   }
-
 }
 /* width */
 ::-webkit-scrollbar {
@@ -38,5 +34,33 @@
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+
+@media only screen and (max-width: 600px) {
+  .movie-section{
+    .heading{
+      font-size: 4.4vw;
+      padding: 2vw;
+    }
+    .image_container{
+      .image{
+        max-height: 14.4vh;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 912px) {
+  .movie-section{
+    .heading{
+      font-size: 3.4vw;
+      padding: 1.8vw;
+    }
+    .image_container{
+      .image{
+        max-height: 15.4vh;
+      }
+    }
+  }
 }
 

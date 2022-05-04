@@ -4,12 +4,33 @@
     // background-color: #111111;
     background: transparent;
     .netflix-logo{
-        height:1.3vw;
+        height:1.4vw;
     }
     .user-logo{
-        height: 1.8vw;
+        height: 2vw;
         position: absolute;
         right:0;
         padding-right: 2vw;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .netflix-navbar{
+        .netflix-logo{
+            height:4.8vw;
+        }
+        .user-logo{
+            height: 4.8vw;
+        }
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 912px) {
+    .netflix-navbar{
+        .netflix-logo{
+            height:3.8vw;
+        }
+        .user-logo{
+            height:3.8vw;
+        }
     }
 }
