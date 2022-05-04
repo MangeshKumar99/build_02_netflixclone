@@ -22,7 +22,6 @@ export class PosterComponent implements OnInit {
       if(this.poster.overview!=""){
         this.poster.overview= this.poster.overview.slice(0,this.poster.overview.length/2) +"...";
       }
-      console.log(this.poster);
       this.url=this.poster.backdrop_path;
     },(error)=>{
     })
