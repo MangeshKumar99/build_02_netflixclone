@@ -22,7 +22,7 @@
 /* width */
 ::-webkit-scrollbar {
   width: 10px;
-  height: 7px;
+  height: 4px;
 }
 
 /* Track */
@@ -41,6 +41,10 @@
 }
 
 @media only screen and (max-width: 600px) {
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 0px;
+  }
   .movie-section{
     .heading{
       font-size: 3.4vw;
@@ -55,6 +59,10 @@
 }
 
 @media only screen and (min-width: 600px) and (max-width: 912px) {
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 0px;
+  }
   .movie-section{
     .heading{
       font-size: 2.4vw;
