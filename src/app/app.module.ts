@@ -8,13 +8,11 @@ import { RowComponent } from './row/row.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatCardModule} from '@angular/material/card';
 import {MatIconModule} from '@angular/material/icon';
-import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button'
 import { HttpClientModule } from '@angular/common/http';
 import { PosterComponent } from './poster/poster.component';
-
-
-
+import {MatTooltipModule} from '@angular/material/tooltip';
+import {MatToolbarModule} from '@angular/material/toolbar';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,8 +27,10 @@ import { PosterComponent } from './poster/poster.component';
     MatCardModule,
     HttpClientModule,
     MatIconModule,
-    MatToolbarModule,
-    MatButtonModule
+    MatButtonModule,
+    MatTooltipModule,
+    MatToolbarModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

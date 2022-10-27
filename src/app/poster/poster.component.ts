@@ -11,6 +11,7 @@ export class PosterComponent implements OnInit {
   poster:any
   COMMON_IMAGE_URL='https://image.tmdb.org/t/p/original';
   url:any
+  originalDescription: any;
 
   constructor(private tmdbService:TmdbService) { }
 
@@ -20,7 +21,8 @@ export class PosterComponent implements OnInit {
       this.appendCommonImageUrl();
       this.poster= this.netflixOriginalsArray[Math.floor(Math.random()*this.netflixOriginalsArray.length)];
       if(this.poster.overview!=""){
-        this.poster.overview= this.poster.overview.slice(0,this.poster.overview.length/2) +"...";
+        this.originalDescription = this.poster.overview;
+        // this.poster.overview= this.poster.overview.slice(0,this.poster.overview.length/2) +"...";
       }
       this.url=this.poster.backdrop_path;
     },(error)=>{
